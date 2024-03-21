@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .preloader {
+    --uib-size: 6rem;
+    --uib-color: #4481eb;
+    --uib-speed: 2s;
+    --uib-bg-opacity: .3;
+}
+
+.container .preloader .container {
+    height: calc(var(--uib-size) * (2.1 / 5));
+    width: var(--uib-size);
+    transform-origin: center;
+    overflow: visible;
+}
+
+.container .preloader .container .car {
+    fill: none;
+    stroke: var(--uib-color);
+    stroke-dasharray: 15, 85;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    animation: travel var(--uib-speed) linear infinite;
+    will-change: stroke-dasharray, stroke-dashoffset;
+    transition: stroke 0.5s ease;
+}
+
+.container .preloader .container .track {
+    stroke: var(--uib-color);
+    opacity: var(--uib-bg-opacity);
+}
+
+@keyframes travel {
+    0% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: 100;
+    }
+}
+
+/* Main page */
+
+@font-face {
+    font-family: ManropeRegular;
+    src: url("../../assets/fonts/Manrope-Regular.ttf");
+}
+
+@font-face {
+    font-family: ManropeSemiBold;
+    src: url("../../assets/fonts/Manrope-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: ManropeBold;
+    src: url("../../assets/fonts/Manrope-ExtraBold.ttf");
+}
+
+.container .main {
+
+}
+
+.container .main .profile-card {
+    width: 30rem;
+    height: 42rem; /*45rem*/
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 0px 0px 50px 0px rgba(34, 60, 80, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.container .main .profile-card .avatar {
+    position: absolute;
+    width: 12.5rem;
+    height: 12.5rem;
+    margin-top: 2rem;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 0px rgba(34, 60, 80, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.container .main .profile-card .nickname {
+    position: absolute;
+    margin-top: 16rem;
+    font: 1.5rem ManropeBold, sans-serif;
+}
+
+.container .main .profile-card .description {
+    position: absolute;
+    margin-top: 18.5rem;
+    font: 1rem ManropeRegular, sans-serif;
+}
+
+.container .main .profile-card .link-block {
+    position: absolute;
+    width: 28rem;
+    height: 22rem;
+    margin-top: 22rem;
+    border-radius: 10px;
+    /*background: deepskyblue;*/
+}
+
+.container .main .profile-card .link-block .link {
+    /*display: inline-block;*/
+    display: flex;
+    width: 28rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    text-decoration: none;
+}
+
+.container .main .profile-card .link-block .link .logotype {
+    width: 2rem;
+    height: 2rem;
+    margin: 0 1rem 0;
+}
+
+.container .main .profile-card .link-block .link .name {
+    color: black;
+    font: 1rem ManropeSemiBold, sans-serif;
+}
+
+.container .main .profile-card .link-block .link .decoration {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container .main .profile-card {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .container .main .profile-card .avatar {
+        width: 22vh;
+        height: 22vh;
+        margin-top: 5vh;
+    }
+
+    .container .main .profile-card .nickname {
+        margin-top: 31vh;
+        text-align: center;
+        /*font: 3vh ManropeBold, sans-serif;*/
+    }
+
+    .container .main .profile-card .description {
+        margin-top: 35.5vh;
+        text-align: center;
+        white-space: pre-wrap;
+        /*font: 2vh ManropeRegular, sans-serif;*/
+    }
+
+    .container .main .profile-card .link-block {
+        width: 83vw;
+        height: 43vh;
+        margin-top: 42vh;
+    }
+
+    .container .main .profile-card .link-block .link {
+        width: 83vw;
+        height: 7vh;
+    }
+}
+
+@media (max-width: 390px) {
+    .container .main .profile-card .nickname {
+        min-width: 300px;
+    }
+
+    .container .main .profile-card .description {
+        max-width: 230px;
+    }
+}
