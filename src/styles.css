@@ -1,0 +1,175 @@
+@font-face {
+   font-family: "GothamPro Regular";
+   src: url("../assets/fonts/GothamPro-Regular.ttf");
+}
+
+@font-face {
+   font-family: "GothamPro Medium";
+   src: url("../assets/fonts/GothamPro-Medium.ttf");
+}
+
+@font-face {
+   font-family: "GothamPro Bold";
+   src: url("../assets/fonts/GothamPro-Bold.ttf");
+}
+
+body {
+   margin: 0;
+   -webkit-user-select: none;
+}
+
+.container {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-image: url("../assets/images/background.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   z-index: 0;
+}
+
+.container .profile-card {
+   width: 35rem;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   padding: 1.5vw 1vw 1vw 1vw;
+   border-radius: 1.5vh;
+   backdrop-filter: blur(20px);
+   /*background-color: rgba(0, 0, 0, .1);*/
+   background-color: rgba(255, 255, 255, .1);
+   border: 1px solid rgba(0, 0, 0, .2);
+   box-shadow: rgba(0, 0, 0, 0.3) 0 0 5vw 100vw;
+   z-index: 1;
+}
+
+.container .profile-card,
+.container .profile-card > * {
+   box-sizing: border-box;
+}
+
+.container .profile-card .avatar {
+   width: 12rem;
+   height: 12rem;
+   border-radius: 50%;
+   box-shadow: 0 0 10px 0 rgba(34, 60, 80, 0.3);
+   -webkit-user-drag: none;
+}
+
+.container .profile-card .nickname {
+   margin-top: 1rem;
+   font-family: "GothamPro Bold", sans-serif;
+   font-size: 1.7rem;
+   color: #ffffff;
+}
+
+.container .profile-card .description {
+   margin-top: 0.5rem;
+   font-family: "GothamPro Regular", sans-serif;
+   font-size: 1.6vh;
+   color: #ffffff;
+}
+
+.container .profile-card .projects-link-block,
+.container .profile-card .personal-link-block {
+   margin-top: 2rem;
+   width: 100%;
+}
+
+.container .profile-card .projects-link-block,
+.container .profile-card .projects-link-block > *,
+.container .profile-card .personal-link-block,
+.container .profile-card .personal-link-block > * {
+   box-sizing: border-box;
+}
+
+.container .profile-card .projects-link-block .title,
+.container .profile-card .personal-link-block .title {
+   margin: 0 0 .5rem 1rem;
+   font-family: "GothamPro Medium", sans-serif;
+   font-size: 1.7vh;
+   color: #ffffff;
+}
+
+.container .profile-card .personal-link-block .link-item {
+   margin-top: .7rem;
+}
+
+.link-item {
+   padding: .6rem 1rem;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   border-radius: 1.5vh;
+   backdrop-filter: blur(30px);
+   background-color: rgba(200, 200, 200, .4);
+   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+   border: 2px solid transparent;
+}
+
+.link-item:hover {
+   border: 2px solid rgba(0, 0, 0, .5);
+}
+
+.link-item .logotype {
+   width: 2.2rem;
+   height: 2.2rem;
+   -webkit-user-drag: none;
+}
+
+.link-item .name,
+.link-item .decorator {
+   font-family: "GothamPro Medium", sans-serif;
+   font-size: 1.6vh;
+   color: #ffffff;
+}
+
+.link-item .name {
+   margin-left: 1.5vh;
+}
+
+.link-item .decorator {
+   margin-left: auto;
+}
+
+@media (max-width: 768px) {
+   .container .profile-card {
+      width: 90%;
+      /*height: 70%;*/
+      min-width: 400px;
+      padding: 1.5vh;
+      border-radius: 1.5vh;
+   }
+
+   .container .profile-card .avatar {
+      margin-top: 0.5rem;
+      width: 20vh;
+      height: 20vh;
+   }
+
+   .container .profile-card .nickname {
+      font-size: 2.5vh;
+   }
+
+   .link-item {
+      border-radius: 1.5vh;
+   }
+}
+
+@media (max-width: 600px) {
+   .container .profile-card {
+      min-width: 320px;
+   }
+
+   .container .profile-card .description {
+      font-size: 1.5vh;
+   }
+
+   .link-item {
+      padding: 0.5rem;
+      border-radius: 1.5vh;
+   }
+}
