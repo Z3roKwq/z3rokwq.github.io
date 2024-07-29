@@ -105,13 +105,13 @@ body {
    text-decoration: none;
    border-radius: 1.5vh;
    backdrop-filter: blur(30px);
-   background-color: rgba(200, 200, 200, .4);
-   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
-   border: 2px solid transparent;
+   background-color: rgba(125, 125, 125, .1);
+   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+   border: 1px solid transparent;
 }
 
 .link-item:hover {
-   border: 2px solid rgba(0, 0, 0, .5);
+   border: 1px solid rgba(31, 31, 31, .5);
 }
 
 .link-item .logotype {
